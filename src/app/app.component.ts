@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'projetoNovo';
+  titulo : string = 'IFSP - São Carlos';
+  mensagem : string = "Seja bem vindo a disciplina de PW1";
+  desenvolvedor : string = "Tiago";
 }
