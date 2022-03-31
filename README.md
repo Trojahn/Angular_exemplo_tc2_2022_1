@@ -1,27 +1,37 @@
-# ProjetoNovo
+# Projeto didático TC2 - 2022.1 - ADS IFSP/São Carlos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
+Este projeto é voltado para armazenar o código-fonte sendo desenvolvido aula-a-aula da disciplina de TC2 de ADS do IFSP/São Carlos, semestre 2022.1.
 
-## Development server
+Este é um projeto didático e não deve ser usado como base para um sistema em produção enquanto não estiver plenamento completo. Alguns trechos de códigos podem estar incompletos e/ou desenvolvidos de forma inadequada.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para utilizar este projeto, você precisa:
+* Baixar o repositório.
+* Entrar na basta base do projeto e instalar as dependências `npm install`
+* Executar o projeto `ng serve`
 
-## Code scaffolding
+## Problemas de execução
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Embora o projeto tenha sido desenvolvido para ser funcional na maioria dos sistemas, a verdade é que o número de dependências e de tecnologias envolvidas é tanto que é comum haver problemas de incompatibilidade em algumas combinações de versões ou similares.
 
-## Build
+Assim, seguem algumas tecnicas que podem ajudar a resolver conflitos na execução deste projeto.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Tentou resetar?
 
-## Running unit tests
+Este é o método mais simples e que pode dar bons resultados. 
+1. Delete a pasta `node_modules`, se existir.
+2. Delete o arquivo `package-lock.json` da pasta raiz, se exitir.
+3. Reinstale as dependências com `npm install`.
+4. Tente executar o projeto normalmente com `ng serve`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Atualizar o projeto
 
-## Running end-to-end tests
+Você pode modificar o arquivo `package.json` e modificar as versões dos pacotes do projeto de acordo com suas necessidades. Depois de feito esse processo, não esqueça de refazer o processo citado no item acima.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Se tiver dúvidas, você pode também utilizar um atualizador automático como o [npm-check-updates](https://github.com/raineorshine/npm-check-updates). Na página inicial do repositório há as instruções específicas de como instalar e executar o projeto.
 
-## Further help
+### Downgrade de versão do node
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Se ainda não funcionar, você pode tentar fazer o downgrade do seu ambiente para o ambiente onde este projeto foi desenvolvido. Este é um procedimento mais avançado e pouco recomendado, mas fica o registro caso seja necessário. As versões específicas usadas na criação deste projeto são:
+* npm: 8.4.1
+* node: 12.21.0
+
