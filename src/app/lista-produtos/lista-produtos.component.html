@@ -5,6 +5,6 @@
     </li>
 </ul>
 
-<ng-container *ngIf="produtoSelecionado.name != ''">
+<ng-container *ngIf="produtoSelecionado != null">
     <app-detalhe-produto (fecharComponente)="executarFechamento($event)" [item]="produtoSelecionado"></app-detalhe-produto>
 </ng-container>

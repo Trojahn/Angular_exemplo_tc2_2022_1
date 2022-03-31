@@ -1,9 +1,10 @@
 <h3>{{item.name | titlecase}}</h3>
 <div><span>Preço: </span>{{item.price | currency}}</div>
 <div><span>Quantidade: </span>{{item.qtde}}</div>
-
-<h2 *ngIf="item.qtde > 0">Disponível</h2>
-<h2 *ngIf="item.qtde <= 0">Indisponível</h2>
+<div>
+    <i *ngIf="item.qtde > 0">Disponível</i>
+    <i *ngIf="item.qtde <= 0">Indisponível</i>
+</div>
 
 <hr>
 <div>

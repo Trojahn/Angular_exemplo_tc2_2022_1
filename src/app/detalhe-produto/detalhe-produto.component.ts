@@ -8,7 +8,7 @@ import { Produto } from '../model/produto.model';
 })
 export class DetalheProdutoComponent implements OnInit {
 
-  @Input() item : Produto = {name: "", price: 0, qtde: 0};
+  @Input() item : Produto;
   @Output() fecharComponente = new EventEmitter<String>();
 
 
@@ -19,8 +19,7 @@ export class DetalheProdutoComponent implements OnInit {
    }
 
   fechar() : void {
-    // Avisa ao pai para fechar o componente
-    this.fecharComponente.emit("Fechei o componente");
+    this.fecharComponente.emit(`Fechando o produto '${this.item.name}'`);
   }
 
 }

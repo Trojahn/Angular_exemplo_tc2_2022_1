@@ -7,7 +7,7 @@ import { Produto } from '../model/produto.model';
   styleUrls: ['./lista-produtos.component.css']
 })
 export class ListaProdutosComponent implements OnInit {
-  produtoSelecionado : Produto  = {name: "", price: 0, qtde: 0}
+  produtoSelecionado : Produto;
   
   lista : Produto[] = [
     {name: "Toddynho", price: 9.99, qtde: 2000},
@@ -24,7 +24,7 @@ export class ListaProdutosComponent implements OnInit {
 
   executarFechamento(info : String) {
     console.log(info);
-    this.produtoSelecionado  = {name: "", price: 0, qtde: 0}
+    this.produtoSelecionado = null;
   }
 
   selecionar(produto : Produto) : void {
