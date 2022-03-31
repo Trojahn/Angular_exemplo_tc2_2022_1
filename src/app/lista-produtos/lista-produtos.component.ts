@@ -22,6 +22,11 @@ export class ListaProdutosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  executarFechamento(info : String) {
+    console.log(info);
+    this.produtoSelecionado  = {name: "", price: 0, qtde: 0}
+  }
+
   selecionar(produto : Produto) : void {
     this.produtoSelecionado = produto;
   }
