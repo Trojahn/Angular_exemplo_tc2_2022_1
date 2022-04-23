@@ -8,28 +8,17 @@ import { Produto } from '../model/produto.model';
   styleUrls: ['./lista-produtos.component.css']
 })
 export class ListaProdutosComponent implements OnInit {
-  produtoSelecionado : Number;
-  
+  produtoSelecionado : number;  
   lista : Produto[];
 
   constructor(private data : DatabaseService) { }
 
   ngOnInit(): void {
     this.atualizarProdutos();
-    this.produtoSelecionado = -1;
   }
 
   private atualizarProdutos() {
     this.lista = this.data.getProdutos();
-  }
-
-  executarFechamento(info : String) {
-    console.log(info);
-    this.produtoSelecionado = -1;
-  }
-
-  selecionar(indice : Number) : void {
-    this.produtoSelecionado = indice;
   }
 
 }

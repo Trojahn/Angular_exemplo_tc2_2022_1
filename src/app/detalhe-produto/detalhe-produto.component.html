@@ -1,18 +1,26 @@
-<h3>{{produto.name | titlecase}}</h3>
-<div><span>Preço: </span>{{produto.price | currency}}</div>
-<div><span>Quantidade: </span>{{produto.qtde}}</div>
-<div>
-    <i *ngIf="produto.qtde > 0">Disponível</i>
-    <i *ngIf="produto.qtde <= 0">Indisponível</i>
-</div>
+<ng-container *ngIf="produto">
+  <h3>{{ produto.name | titlecase }}</h3>
+  <div><span>Preço: </span>{{ produto.price | currency }}</div>
+  <div>
+    <span>Quantidade: </span>{{ produto.qtde }}
+    <span>
+      <i *ngIf="produto.qtde > 0">- Disponível</i>
+      <i *ngIf="produto.qtde <= 0">- Indisponível</i>
+    </span>
+  </div>
 
-<hr>
-<div>
+  <hr />
+  <p>Edite as informações abaixo</p>
+  <div>
     <p>Nome</p>
-    <input type="text" [(ngModel)]="produto.name">
+    <input type="text" [(ngModel)]="produto.name" />
     <p>Preço</p>
-    <input type="number" [(ngModel)]="produto.price">
+    <input type="number" [(ngModel)]="produto.price" />
     <p>Quantidade</p>
-    <input type="number" [(ngModel)]="produto.qtde">
-</div>
-<button (click)="fechar()">Fechar produto</button>
+    <input type="number" [(ngModel)]="produto.qtde" />
+  </div>
+</ng-container>
+
+<ng-container *ngIf="produto == undefined">
+  <h2>Produto não encontrado!</h2>
+</ng-container>

@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titulo : string = 'IFSP - São Carlos';
-  mensagem : string = "Seja bem vindo a disciplina de PW1";
-  desenvolvedor : string = "Tiago";
+  mensagem : string = "Seja bem vindo a disciplina de TC2";
+  desenvolvedor : string = "IFSP São Carlos";
 }
